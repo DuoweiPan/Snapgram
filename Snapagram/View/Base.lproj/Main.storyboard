@@ -257,20 +257,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjU-tN-hvv">
-                                <rect key="frame" x="123" y="237" width="169" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Take a picture"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjU-tN-hvv">
+                                <rect key="frame" x="105" y="141" width="204" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5Gd-LL-htq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="from camera 📸"/>
                                 <connections>
                                     <action selector="UseCamera:" destination="qJC-UZ-mXh" eventType="touchUpInside" id="qJX-Kd-5hU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14O-iu-B5l">
+                                <rect key="frame" x="105" y="241" width="204" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4GQ-rG-EJ6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="from photos 🌃"/>
+                                <connections>
+                                    <action selector="UseCamera:" destination="qJC-UZ-mXh" eventType="touchUpInside" id="8Qp-fZ-v92"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6es-4g-nBr">
+                                <rect key="frame" x="75" y="367" width="264" height="316"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZA-lv-V7t">
+                                <rect key="frame" x="150" y="733" width="114" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Post🥳"/>
+                                <connections>
+                                    <action selector="Post:" destination="qJC-UZ-mXh" eventType="touchUpInside" id="8qI-tq-P1B"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6es-4g-nBr" firstAttribute="leading" secondItem="OBZ-bv-j3x" secondAttribute="leading" constant="75" id="1xG-W8-vGH"/>
+                            <constraint firstItem="14O-iu-B5l" firstAttribute="leading" secondItem="OBZ-bv-j3x" secondAttribute="leading" constant="105" id="26Y-M1-ZSh"/>
+                            <constraint firstItem="OBZ-bv-j3x" firstAttribute="trailing" secondItem="WjU-tN-hvv" secondAttribute="trailing" constant="105" id="HmN-Bj-lyK"/>
+                            <constraint firstItem="6es-4g-nBr" firstAttribute="top" secondItem="14O-iu-B5l" secondAttribute="bottom" constant="70" id="NX3-ip-nG1"/>
+                            <constraint firstItem="OBZ-bv-j3x" firstAttribute="trailing" secondItem="14O-iu-B5l" secondAttribute="trailing" constant="105" id="Ob3-iV-Iqa"/>
+                            <constraint firstItem="WjU-tN-hvv" firstAttribute="centerX" secondItem="OBZ-bv-j3x" secondAttribute="centerX" id="Qcg-9R-zwQ"/>
+                            <constraint firstItem="OBZ-bv-j3x" firstAttribute="trailing" secondItem="YZA-lv-V7t" secondAttribute="trailing" constant="150" id="bdw-xb-kgY"/>
+                            <constraint firstItem="OBZ-bv-j3x" firstAttribute="trailing" secondItem="6es-4g-nBr" secondAttribute="trailing" constant="75" id="eLI-w9-Rbk"/>
+                            <constraint firstItem="6es-4g-nBr" firstAttribute="centerX" secondItem="OBZ-bv-j3x" secondAttribute="centerX" id="hcd-yA-Nom"/>
+                            <constraint firstItem="YZA-lv-V7t" firstAttribute="leading" secondItem="OBZ-bv-j3x" secondAttribute="leading" constant="150" id="hiO-BR-SDx"/>
+                            <constraint firstItem="YZA-lv-V7t" firstAttribute="centerX" secondItem="OBZ-bv-j3x" secondAttribute="centerX" id="jSc-r4-iqz"/>
+                            <constraint firstItem="WjU-tN-hvv" firstAttribute="top" secondItem="OBZ-bv-j3x" secondAttribute="top" constant="53" id="lfD-PQ-LYM"/>
+                            <constraint firstItem="YZA-lv-V7t" firstAttribute="top" secondItem="6es-4g-nBr" secondAttribute="bottom" constant="50" id="rSg-04-0t7"/>
+                            <constraint firstItem="14O-iu-B5l" firstAttribute="centerX" secondItem="OBZ-bv-j3x" secondAttribute="centerX" id="rfp-3F-AsQ"/>
+                            <constraint firstItem="14O-iu-B5l" firstAttribute="top" secondItem="WjU-tN-hvv" secondAttribute="bottom" constant="50" id="tac-Q9-T80"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OBZ-bv-j3x"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Snap" image="bolt.fill" catalog="system" id="K6k-uS-Vy4"/>
                     <navigationItem key="navigationItem" id="9wl-JN-xnx"/>
+                    <connections>
+                        <outlet property="ButtonText" destination="YZA-lv-V7t" id="MQE-ey-6NT"/>
+                        <outlet property="Picture" destination="6es-4g-nBr" id="9G3-ks-IBD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fub-9A-ORI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

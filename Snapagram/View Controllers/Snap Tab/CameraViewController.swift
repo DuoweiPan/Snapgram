@@ -11,7 +11,6 @@ import UIKit
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var imagePickerController = UIImagePickerController()
 
-    var data = FeedData()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imagePickerController.delegate = self
@@ -20,6 +19,12 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     
+    @IBOutlet weak var Picture: UIImageView!
+    
+    @IBOutlet weak var ButtonText: UIButton!
+    
+    @IBAction func Post(_ sender: UIButton) {
+    }
     @IBAction func UseCamera(_ sender: UIButton) {
         present(imagePickerController, animated: true, completion: nil)
     }
@@ -27,8 +32,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let picture = info[.originalImage] as? UIImage {
             //Use image
-            var newPost = Post(location: "Berkeley", image: picture, user: "jeffery", caption: "hello", date: Date())
-            data.addPost(post: newPost)
+            Picture.image = picture
         }
         imagePickerController.dismiss(animated: true, completion: nil)
     }
