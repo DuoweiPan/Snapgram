@@ -252,16 +252,27 @@
         <!--Snap-->
         <scene sceneID="TFg-EA-sNv">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fub-9A-ORI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="qJC-UZ-mXh" customClass="CameraViewController" customModule="Snapagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rUl-t9-NKW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjU-tN-hvv">
+                                <rect key="frame" x="123" y="237" width="169" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take a picture"/>
+                                <connections>
+                                    <action selector="UseCamera:" destination="qJC-UZ-mXh" eventType="touchUpInside" id="qJX-Kd-5hU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="OBZ-bv-j3x"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Snap" image="bolt.fill" catalog="system" id="K6k-uS-Vy4"/>
+                    <navigationItem key="navigationItem" id="9wl-JN-xnx"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fub-9A-ORI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1021.7391304347827" y="214.95535714285714"/>
         </scene>
@@ -293,7 +304,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="bv6-W6-Eac" kind="relationship" relationship="viewControllers" id="9t5-Vj-iCL"/>
-                        <segue destination="qJC-UZ-mXh" kind="relationship" relationship="viewControllers" id="ySm-HL-tnk"/>
+                        <segue destination="qJC-UZ-mXh" kind="relationship" relationship="viewControllers" id="UpY-au-Ch9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1R-Qk-U00" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
