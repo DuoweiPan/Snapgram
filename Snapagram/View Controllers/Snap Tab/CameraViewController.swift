@@ -10,6 +10,7 @@ import UIKit
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var imagePickerController = UIImagePickerController()
+    var globalPic: UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var ButtonText: UIButton!
     
     @IBAction func Post(_ sender: UIButton) {
+        performSegue(withIdentifier: "toPost", sender: globalPic)
     }
     @IBAction func UseCamera(_ sender: UIButton) {
         present(imagePickerController, animated: true, completion: nil)
@@ -32,8 +34,16 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let picture = info[.originalImage] as? UIImage {
             //Use image
-            Picture.image = picture
+            self.globalPic = picture
+            self.Picture.image = picture
+            self.ButtonText.setTitle("Post🥳", for: UIControl.State.normal)
         }
         imagePickerController.dismiss(animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? PostViewController, let image = sender as? UIImage {
+            dest.imageToPost = image
+        }
     }
 }

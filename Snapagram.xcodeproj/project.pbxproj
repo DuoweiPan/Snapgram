@@ -20,6 +20,8 @@
 		A238126E2415AFBC008E0F6C /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238126D2415AFBC008E0F6C /* FeedData.swift */; };
 		B01E353524185924009CB7A2 /* ChooseThreadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01E353424185924009CB7A2 /* ChooseThreadCollectionViewCell.swift */; };
 		B0CD011D24178743008EFC00 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CD011C24178743008EFC00 /* PreviewViewController.swift */; };
+		D80525472420594800610654 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80525462420594800610654 /* PostViewController.swift */; };
+		D8052549242084C600610654 /* ThreadPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8052548242084C500610654 /* ThreadPostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		A238126D2415AFBC008E0F6C /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
 		B01E353424185924009CB7A2 /* ChooseThreadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseThreadCollectionViewCell.swift; sourceTree = "<group>"; };
 		B0CD011C24178743008EFC00 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		D80525462420594800610654 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostViewController.swift; path = "Snapagram/View Controllers/Snap Tab/PostViewController.swift"; sourceTree = SOURCE_ROOT; };
+		D8052548242084C500610654 /* ThreadPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadPostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				30438F0E24197A0A003FEBEF /* CameraViewController.swift */,
+				D80525462420594800610654 /* PostViewController.swift */,
 			);
 			path = "Snap Tab";
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			children = (
 				A23812542415A9EF008E0F6C /* Main.storyboard */,
 				A23812672415AF20008E0F6C /* ThreadCollectionViewCell.swift */,
+				D8052548242084C500610654 /* ThreadPostCell.swift */,
 				A23812692415AF8D008E0F6C /* PostTableViewCell.swift */,
 				B01E353424185924009CB7A2 /* ChooseThreadCollectionViewCell.swift */,
 			);
@@ -200,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A23812682415AF20008E0F6C /* ThreadCollectionViewCell.swift in Sources */,
+				D8052549242084C600610654 /* ThreadPostCell.swift in Sources */,
 				30438F0F24197A0A003FEBEF /* CameraViewController.swift in Sources */,
 				A238124F2415A9EF008E0F6C /* AppDelegate.swift in Sources */,
 				B01E353524185924009CB7A2 /* ChooseThreadCollectionViewCell.swift in Sources */,
@@ -209,6 +216,7 @@
 				A23812632415AE8E008E0F6C /* FeedViewController.swift in Sources */,
 				A23812512415A9EF008E0F6C /* SceneDelegate.swift in Sources */,
 				A238126C2415AFAB008E0F6C /* Constants.swift in Sources */,
+				D80525472420594800610654 /* PostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
