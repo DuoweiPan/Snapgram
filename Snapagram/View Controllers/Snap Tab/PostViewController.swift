@@ -8,35 +8,83 @@
 
 import UIKit
 
-class PostViewController: UIViewController, UICollectionViewDataSource {
+class PostViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
     
     var imageToPost: UIImage?
-    var feedData: FeedData!
+    var selectedThread: Thread?
+    var selectFlag = true
+    var deselectFlag = false
     
+    @IBOutlet weak var location: UITextField!
+    @IBOutlet weak var caption: UITextField!
     @IBOutlet weak var ThreadCollectionView: UICollectionView!
     @IBOutlet weak var imageToDisplay: UIImageView!
+    
+    @IBAction func createThread(_ sender: UIButton) {
+        if let thread = selectedThread {
+            thread.addEntry(threadEntry: ThreadEntry(username: feed.username, image: imageToPost!))
+        }
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func createPost(_ sender: UIButton) {
+        let p =  Post(location: location.text!, image: imageToPost, user: "jeff", caption: caption.text!, date: Date())
+        feed.addPost(post: p)
+        _ = navigationController?.popViewController(animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         imageToDisplay.image = imageToPost
         ThreadCollectionView.dataSource = self
-        self.feedData = FeedData()
+        ThreadCollectionView.delegate = self
+        caption.placeholder = "Caption:"
+        location.placeholder = "Location:"
+        self.caption.delegate = self
+        self.location.delegate = self
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return feedData.threads.count
+        return feed.threads.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let index = indexPath.item
-        let thread = feedData.threads[index]
+        let thread = feed.threads[index]
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ThreadPostCell", for: indexPath) as? ThreadPostCell {
-            cell.ChooseButton.setTitle(thread.emoji, for: UIControl.State.normal)
+            cell.Emoji.text = thread.emoji
             cell.ThreadName.text = thread.name
             return cell
         }
         return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // segue to preview controller with selected thread
+        if (selectFlag) {
+            let chosenThread = feed.threads[indexPath.item]
+            selectedThread = chosenThread
+            let cell = collectionView.cellForItem(at: indexPath)
+            cell?.backgroundColor = UIColor.blue
+            selectFlag = false
+            deselectFlag = true
+        }
+        if (deselectFlag) {
+            let chosenThread = feed.threads[indexPath.item]
+            selectedThread = nil
+            let cell = collectionView.cellForItem(at: indexPath)
+            cell?.backgroundColor = UIColor.white
+            selectFlag = true
+            deselectFlag = false
+        }
     }
     /*
     // MARK: - Navigation
@@ -47,5 +95,4 @@ class PostViewController: UIViewController, UICollectionViewDataSource {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

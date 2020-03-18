@@ -386,49 +386,46 @@
                                     <constraint firstAttribute="height" constant="130" id="fHw-x7-Oa9"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="P9G-Qm-cX9">
-                                    <size key="itemSize" width="123" height="127"/>
+                                    <size key="itemSize" width="176" height="129"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="ThreadPostCell" id="4cA-4q-ube" customClass="ThreadPostCell" customModule="Snapagram" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1.5" width="123" height="127"/>
+                                        <rect key="frame" x="0.0" y="0.5" width="176" height="129"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jAM-e3-04G">
-                                            <rect key="frame" x="0.0" y="0.0" width="123" height="127"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="129"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYF-DX-i3Z">
-                                                    <rect key="frame" x="15.5" y="17.5" width="92" height="92"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cM7-NF-GEC">
+                                                    <rect key="frame" x="69.5" y="121" width="37.5" height="8"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2H-vV-7ll">
+                                                    <rect key="frame" x="32" y="8.5" width="112.5" height="112.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="NYF-DX-i3Z" secondAttribute="height" multiplier="1:1" id="pbc-UE-bsD"/>
+                                                        <constraint firstAttribute="width" secondItem="d2H-vV-7ll" secondAttribute="height" multiplier="1:1" id="vLK-Jj-4XD"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <connections>
-                                                        <action selector="ChooseThread:" destination="4cA-4q-ube" eventType="touchUpInside" id="Q2E-Qb-X4R"/>
-                                                    </connections>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cM7-NF-GEC">
-                                                    <rect key="frame" x="36.5" y="109.5" width="50" height="17.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="cM7-NF-GEC" secondAttribute="bottom" id="1i4-Vr-Ac3"/>
-                                                <constraint firstItem="NYF-DX-i3Z" firstAttribute="width" secondItem="jAM-e3-04G" secondAttribute="width" multiplier="0.75" id="7Ng-hl-ED3"/>
+                                                <constraint firstItem="d2H-vV-7ll" firstAttribute="centerY" secondItem="jAM-e3-04G" secondAttribute="centerY" id="DGY-eb-NeY"/>
                                                 <constraint firstItem="cM7-NF-GEC" firstAttribute="centerX" secondItem="jAM-e3-04G" secondAttribute="centerX" id="Fn8-Im-fRz"/>
-                                                <constraint firstItem="cM7-NF-GEC" firstAttribute="top" secondItem="NYF-DX-i3Z" secondAttribute="bottom" id="Lhe-Il-ZDn"/>
-                                                <constraint firstItem="NYF-DX-i3Z" firstAttribute="centerX" secondItem="jAM-e3-04G" secondAttribute="centerX" id="RSh-Rv-Ndg"/>
-                                                <constraint firstItem="NYF-DX-i3Z" firstAttribute="centerY" secondItem="jAM-e3-04G" secondAttribute="centerY" id="VQB-m5-hQZ"/>
+                                                <constraint firstItem="cM7-NF-GEC" firstAttribute="top" secondItem="d2H-vV-7ll" secondAttribute="bottom" id="dAy-GA-B89"/>
+                                                <constraint firstItem="d2H-vV-7ll" firstAttribute="centerX" secondItem="jAM-e3-04G" secondAttribute="centerX" id="f5P-In-nnp"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="123" height="127"/>
+                                        <size key="customSize" width="176" height="129"/>
                                         <connections>
-                                            <outlet property="ChooseButton" destination="NYF-DX-i3Z" id="s1Q-81-SaO"/>
+                                            <outlet property="Emoji" destination="d2H-vV-7ll" id="M2e-4c-Op0"/>
                                             <outlet property="ThreadName" destination="cM7-NF-GEC" id="YSf-2m-BuS"/>
                                         </connections>
                                     </collectionViewCell>
@@ -437,6 +434,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uof-81-Ohr">
                                 <rect key="frame" x="100" y="259" width="214" height="30"/>
                                 <state key="normal" title="Create Thread！"/>
+                                <connections>
+                                    <action selector="createThread:" destination="tBj-QP-mPS" eventType="touchUpInside" id="2Sq-qo-Axf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Feed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvf-dp-Kpu">
                                 <rect key="frame" x="10" y="304" width="394" height="21"/>
@@ -464,10 +464,6 @@
                                     <constraint firstAttribute="width" constant="214" id="Y7C-QK-0lK"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hli-wk-rS0">
-                                <rect key="frame" x="334" y="812" width="60" height="30"/>
-                                <state key="normal" title="Go!"/>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJk-Ao-pkS">
                                 <rect key="frame" x="10" y="335" width="394" height="34"/>
                                 <constraints>
@@ -477,20 +473,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6v-Pe-yBg">
+                                <rect key="frame" x="339" y="785" width="45" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Go!"/>
+                                <connections>
+                                    <action selector="createPost:" destination="tBj-QP-mPS" eventType="touchUpInside" id="WDW-JN-Bb3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="gvf-dp-Kpu" firstAttribute="top" secondItem="dnF-tB-5lA" secondAttribute="bottom" constant="45" id="0l7-cp-5Bu"/>
                             <constraint firstItem="mJk-Ao-pkS" firstAttribute="top" secondItem="gvf-dp-Kpu" secondAttribute="bottom" constant="10" id="55h-bk-ihc"/>
-                            <constraint firstItem="Hli-wk-rS0" firstAttribute="leading" secondItem="ptt-Qu-XF6" secondAttribute="trailing" constant="20" id="6rc-zW-3jg"/>
                             <constraint firstItem="mJk-Ao-pkS" firstAttribute="leading" secondItem="q3L-D2-3j7" secondAttribute="leading" constant="10" id="8yL-so-mVM"/>
-                            <constraint firstItem="q3L-D2-3j7" firstAttribute="bottom" secondItem="Hli-wk-rS0" secondAttribute="bottom" constant="20" id="97X-P5-mvW"/>
                             <constraint firstItem="1WG-rB-hUD" firstAttribute="leading" secondItem="q3L-D2-3j7" secondAttribute="leading" constant="10" id="ALd-ca-oWc"/>
                             <constraint firstItem="q3L-D2-3j7" firstAttribute="bottom" secondItem="ptt-Qu-XF6" secondAttribute="bottom" constant="46" id="Lat-hR-Dvg"/>
                             <constraint firstItem="q3L-D2-3j7" firstAttribute="trailing" secondItem="gvf-dp-Kpu" secondAttribute="trailing" constant="10" id="Mta-Z4-ZTu"/>
                             <constraint firstItem="uof-81-Ohr" firstAttribute="top" secondItem="dnF-tB-5lA" secondAttribute="bottom" id="Tbs-Fe-Ezm"/>
+                            <constraint firstItem="q3L-D2-3j7" firstAttribute="bottom" secondItem="f6v-Pe-yBg" secondAttribute="bottom" constant="30" id="VL1-YR-GnB"/>
                             <constraint firstItem="q3L-D2-3j7" firstAttribute="trailing" secondItem="S6q-Jv-noX" secondAttribute="trailing" constant="10" id="XZa-RT-QAY"/>
-                            <constraint firstItem="q3L-D2-3j7" firstAttribute="trailing" secondItem="Hli-wk-rS0" secondAttribute="trailing" constant="20" id="YhC-qD-CIf"/>
                             <constraint firstItem="uof-81-Ohr" firstAttribute="leading" secondItem="q3L-D2-3j7" secondAttribute="leading" constant="100" id="aOz-1E-0qt"/>
                             <constraint firstItem="uof-81-Ohr" firstAttribute="centerX" secondItem="q3L-D2-3j7" secondAttribute="centerX" id="ayP-ne-sge"/>
                             <constraint firstItem="q3L-D2-3j7" firstAttribute="trailing" secondItem="1WG-rB-hUD" secondAttribute="trailing" constant="10" id="cLn-if-Fgd"/>
@@ -501,6 +503,7 @@
                             <constraint firstItem="gvf-dp-Kpu" firstAttribute="leading" secondItem="q3L-D2-3j7" secondAttribute="leading" constant="10" id="pnU-cw-PQc"/>
                             <constraint firstItem="q3L-D2-3j7" firstAttribute="trailing" secondItem="mJk-Ao-pkS" secondAttribute="trailing" constant="10" id="qjf-B6-28S"/>
                             <constraint firstItem="dnF-tB-5lA" firstAttribute="top" secondItem="S6q-Jv-noX" secondAttribute="bottom" constant="10" id="r0M-7v-82g"/>
+                            <constraint firstItem="q3L-D2-3j7" firstAttribute="trailing" secondItem="f6v-Pe-yBg" secondAttribute="trailing" constant="30" id="rna-16-yd2"/>
                             <constraint firstItem="q3L-D2-3j7" firstAttribute="trailing" secondItem="dnF-tB-5lA" secondAttribute="trailing" constant="10" id="tPd-YF-pRS"/>
                             <constraint firstItem="q3L-D2-3j7" firstAttribute="trailing" secondItem="ptt-Qu-XF6" secondAttribute="trailing" constant="100" id="xE7-IN-nEw"/>
                             <constraint firstItem="1WG-rB-hUD" firstAttribute="top" secondItem="mJk-Ao-pkS" secondAttribute="bottom" constant="10" id="yG2-Ty-UJn"/>
@@ -511,7 +514,9 @@
                     <navigationItem key="navigationItem" id="mnJ-c1-Q6o"/>
                     <connections>
                         <outlet property="ThreadCollectionView" destination="dnF-tB-5lA" id="Iv3-Q5-42z"/>
+                        <outlet property="caption" destination="1WG-rB-hUD" id="Ajv-TA-UCj"/>
                         <outlet property="imageToDisplay" destination="ptt-Qu-XF6" id="wzS-Er-ZMp"/>
+                        <outlet property="location" destination="mJk-Ao-pkS" id="5I0-4e-l7I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bam-Ti-oOt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

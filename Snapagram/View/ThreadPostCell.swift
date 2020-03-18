@@ -10,8 +10,7 @@ import UIKit
 
 class ThreadPostCell: UICollectionViewCell {
     
-    @IBAction func ChooseThread(_ sender: UIButton) {
-    }
-    @IBOutlet weak var ChooseButton: UIButton!
+
+    @IBOutlet weak var Emoji: UILabel!
     @IBOutlet weak var ThreadName: UILabel!
 }

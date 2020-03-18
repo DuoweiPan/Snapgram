@@ -25,6 +25,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var ButtonText: UIButton!
     
     @IBAction func Post(_ sender: UIButton) {
+        self.Picture.image = nil
+        self.ButtonText.setTitle("", for: UIControl.State.normal)
         performSegue(withIdentifier: "toPost", sender: globalPic)
     }
     @IBAction func UseCamera(_ sender: UIButton) {

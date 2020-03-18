@@ -23,6 +23,7 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         postTableView.dataSource = self
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         threadCollectionView.reloadData()
         postTableView.reloadData()
