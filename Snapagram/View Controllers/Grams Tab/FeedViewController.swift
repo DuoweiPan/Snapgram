@@ -15,13 +15,12 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        feed.fetch()
         threadCollectionView.delegate = self
         threadCollectionView.dataSource = self
-
         postTableView.delegate = self
         postTableView.dataSource = self
-    }
+        }
     
     
     override func viewWillAppear(_ animated: Bool) {

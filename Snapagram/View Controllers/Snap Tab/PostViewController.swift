@@ -12,8 +12,7 @@ class PostViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     var imageToPost: UIImage?
     var selectedThread: Thread?
-    var selectFlag = true
-    var deselectFlag = false
+    var selectedCell: UICollectionViewCell?
     
     @IBOutlet weak var location: UITextField!
     @IBOutlet weak var caption: UITextField!
@@ -69,22 +68,16 @@ class PostViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // segue to preview controller with selected thread
-        if (selectFlag) {
+        // if (selectFlag) {
             let chosenThread = feed.threads[indexPath.item]
             selectedThread = chosenThread
             let cell = collectionView.cellForItem(at: indexPath)
-            cell?.backgroundColor = UIColor.blue
-            selectFlag = false
-            deselectFlag = true
-        }
-        if (deselectFlag) {
-            let chosenThread = feed.threads[indexPath.item]
-            selectedThread = nil
-            let cell = collectionView.cellForItem(at: indexPath)
-            cell?.backgroundColor = UIColor.white
-            selectFlag = true
-            deselectFlag = false
-        }
+            if let cur = selectedCell {
+                cur.backgroundColor = UIColor.white
+            }
+            selectedCell = cell
+            selectedCell?.backgroundColor = UIColor.blue
+           // selectFlag = false
     }
     /*
     // MARK: - Navigation
